@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vtex/api": "^3.35.0",
+    "eslint": "^5.15.1",
+    "eslint-config-vtex": "^10.1.0",
+    "eslint-config-vtex-react": "^4.1.0"
+  }
+}

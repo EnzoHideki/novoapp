@@ -1,0 +1,16 @@
+{
+  "name": "nomedoapp",
+  "vendor": "vtex",
+  "version": "0.0.0",
+  "builders": {
+    "react": "3.x",
+    "pages": "1.x",
+    "graphql": "1.x",
+    "node": "4.x"
+  },
+  "dependencies": {
+    "vtex.admin": "2.x",
+    "vtex.styleguide": "9.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,10 @@
+query pessoas {
+  usuarios {
+    photo
+    nome
+    amigos {
+      nome
+    }
+    idade
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "nomedoapp": {
+        "component": "MyApp",
+        "render": "client"
+    },
+
+    "nomedoapp.rota": {
+        "component": "MyApp",
+        "render": "client"
+    }
+}

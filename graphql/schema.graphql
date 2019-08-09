@@ -1,0 +1,24 @@
+type Query {
+  usuario(id: ID!): Usuario
+  usuarios: [Usuario]
+}
+
+type Usuario {
+  photo: String
+  id: ID!
+  nome: String!
+  amigos: [Usuario]
+  idade: Int
+}
+
+type Mutation {
+  criaUsuario(input: CriaUsuarioInput): CriaUsuarioPayload
+}
+
+input CriaUsuarioInput {
+  nome: String
+}
+
+type CriaUsuarioPayload {
+  usuario: Usuario
+}
