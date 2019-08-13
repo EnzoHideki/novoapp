@@ -1,6 +1,6 @@
 type Query {
   usuario(id: ID!): Usuario
-  usuarios: [Usuario]
+  usuarios(from: Int, to: Int): [Usuario]
 }
 
 type Usuario {

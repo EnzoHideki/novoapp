@@ -1,5 +1,5 @@
-query pessoas {
-  usuarios {
+query pessoas($from: Int, $to: Int) {
+  usuarios(from: $from, to: $to) {
     photo
     nome
     amigos {

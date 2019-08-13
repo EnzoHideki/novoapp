@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState, ReactText } from "react";
 import { Table } from "vtex.styleguide";
 import { Query } from "react-apollo";
 import pessoas from "./graphql/queries/pessoas.gql";
@@ -21,13 +21,16 @@ const MyApp: FC = () => {
     window.postMessage({ action: { type: "STOP_LOADING" } }, "*");
   });
 
+  const [tableLen, setTableLen] = useState(5)
+  const [from, setFrom] = useState(0)
+  const [to, setTo] = useState(tableLen)
+
   return (
     <div>
-      <PessoasQuery query={pessoas}>
+      <PessoasQuery query={pessoas} variables={{from, to}}>
         {({ data }) => {
           if (data && data.usuarios) {
             const info = data.usuarios.map(x => {
-              console.log(x.photo)
               if (x.nome === "Anita") {
                 return {
                   photo: x.photo,
@@ -70,6 +73,23 @@ const MyApp: FC = () => {
                   }
                 }}
                 items={info}
+                pagination={{
+                  onNextClick: () => {},
+                  onPrevClick: () => {},
+                  currentItemFrom: from,
+                  currentItemTo: to,
+                  onRowsChange: (e, value: number | string) => {
+                    setFrom(0)
+                    const v = typeof value == "string" ? parseInt(value) : value
+                    setTableLen(v)
+                    setTo(v)
+                  },
+                  textShowRows: 'Show rows',
+                  textOf: 'of',
+                  totalItems: 0,
+                  rowsOptions: [1,2,3,4,5,6,7,8,9,10],
+                  selectedOption: tableLen
+                }}
               />
             );
           } else {
