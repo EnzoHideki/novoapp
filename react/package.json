@@ -11,8 +11,6 @@
     "eslint-config-vtex-react": "^4.1.0",
     "prettier": "^1.16.4",
     "typescript": "3.5.2",
-    "vtex.render-runtime": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.45.3/public/_types/react",
-    "vtex.styleguide": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.styleguide@9.72.3/public/_types/react",
     "vtex.admin": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.admin@2.3.0/public/_types/react"
   },
   "dependencies": {

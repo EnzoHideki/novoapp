@@ -1,6 +1,6 @@
 type Query {
   usuario(id: ID!): Usuario
-  usuarios(from: Int, to: Int): [Usuario]
+  usuarios(from: Int, to: Int, ord: String): [Usuario]
 }
 
 type Usuario {
@@ -13,6 +13,7 @@ type Usuario {
 
 type Mutation {
   criaUsuario(input: CriaUsuarioInput): CriaUsuarioPayload
+  alteraIdade(id: ID!): Int
 }
 
 input CriaUsuarioInput {

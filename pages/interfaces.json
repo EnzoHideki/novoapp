@@ -7,5 +7,10 @@
     "nomedoapp.rota": {
         "component": "MyApp",
         "render": "client"
+    },
+
+    "nomedoapp.outrapag": {
+        "component": "Wiki",
+        "render": "client"
     }
 }

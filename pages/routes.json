@@ -1,5 +1,9 @@
 {
     "nomedoapp.rota": {
         "path": "casa"
+    },
+    
+    "nomedoapp.outrapag": {
+        "path": "casa/user/:userId"
     }
 }

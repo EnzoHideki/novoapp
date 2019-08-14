@@ -1,10 +1,11 @@
-query pessoas($from: Int, $to: Int) {
-  usuarios(from: $from, to: $to) {
+query pessoas($from: Int, $to: Int, $ord: String) {
+  usuarios(from: $from, to: $to, ord: $ord) {
     photo
     nome
     amigos {
       nome
     }
     idade
+    id
   }
 }
