@@ -1,0 +1,3 @@
+mutation updateIdade($id: ID!) {
+  alteraIdade(id: $id)
+}

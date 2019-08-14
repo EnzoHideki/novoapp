@@ -1,0 +1,10 @@
+query pessoa($id: ID!) {
+  usuario(id: $id) {
+    photo
+    nome
+    amigos {
+      nome
+    }
+    idade
+  }
+}
