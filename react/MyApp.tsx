@@ -77,9 +77,9 @@ const MyApp: FC = () => {
         variables={{ from: currentItemFrom, to: currentItemTo, ord: sortOrder }}
       >
         {({ data }) => {
-          console.log(data)
+          // console.log(data)
           if (data && data.usuarios) {
-            console.log(data.usuarios)
+            // console.log(data.usuarios)
             var info = data.usuarios.map(x => {
               return {
                 id: x.id,

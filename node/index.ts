@@ -50,9 +50,9 @@ export default new Service({
                     }
                 },
                 alteraIdade: (_, args) => {
-                    console.log(listaDeUsuarios[parseInt(args.id)].ano)
+                    // console.log(listaDeUsuarios[parseInt(args.id)].ano)
                     listaDeUsuarios[parseInt(args.id)].ano--
-                    console.log(listaDeUsuarios[parseInt(args.id)].ano)
+                    // console.log(listaDeUsuarios[parseInt(args.id)].ano)
                     return listaDeUsuarios[parseInt(args.id)].ano
                 }
             }
