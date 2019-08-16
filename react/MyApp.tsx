@@ -58,7 +58,7 @@ const MyApp: FC = () => {
     setCurrentItemFrom(currentItemFrom);
   };
 
-  const handleRowsChange = (e: any, value: string | number) => {
+  const handleRowsChange = (value: string | number) => {
     const v = typeof value == "string" ? parseInt(value) : value;
     const start = currentItemFrom;
 
@@ -69,6 +69,11 @@ const MyApp: FC = () => {
   };
 
   const { navigate } = useRuntime();
+  const { query } = useRuntime()
+  
+  if (query.rows) {
+    // handleRowsChange(query.rows)
+  }
 
   return (
     <div>
